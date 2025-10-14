@@ -16,16 +16,16 @@ const postSchema = new mongoose.Schema(
             type: String,
             default: ''
         },
-        likes: {
+        likes:[ {
             type: [mongoose.Schema.Types.ObjectId], // Array of User IDs who liked the post
             ref: 'User',
             default: []
-        },
-        comments: {
+        }],
+        comments:[ {
             type: [mongoose.Schema.Types.ObjectId], // Array of Comment IDs
             ref: 'Comment',
             default: []
-        }
+        }]
     }
     ,
     {

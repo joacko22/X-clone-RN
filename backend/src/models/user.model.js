@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema(
-    {timestastamp: true },
+ 
     {
         clerkId: { type: String, required: true, unique: true } ,
     
@@ -19,17 +19,17 @@ const userSchema = new mongoose.Schema(
 
         location: { type: String, default:"" } ,
 
-        followers:{
+        followers:[{
             type:mongoose.Schema.Types.ObjectId, // Reference to User model 
             ref: "User",
             default: [] // Array of User IDs
-        },
-        following:{
+        }],
+        following:[{
             type:mongoose.Schema.Types.ObjectId, // Reference to User model 
             ref: "User",
             default: [] // Array of User IDs
-        }
-    },
+        }]
+    },   {timestastamp: true },
 )
 const User = mongoose.model("User", userSchema);
 export default User;
