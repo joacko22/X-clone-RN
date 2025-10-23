@@ -35,7 +35,7 @@ El proyecto está construido sobre un stack moderno y eficiente:
 | :--- | :--- |
 | **Node.js** | Entorno de ejecución para el servidor. |
 | **Express.js** | (Inferencia) Framework web rápido y minimalista para la API. |
-| **Base de Datos** | (Pendiente de confirmar: MongoDB, PostgreSQL, etc. **Añadir aquí**). |
+| **Base de Datos** | MongoDB |
 
 ---
 
