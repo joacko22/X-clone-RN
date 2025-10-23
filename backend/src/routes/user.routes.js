@@ -1,10 +1,10 @@
-const express = require('express');
+import express from'express';
 
 const router = express.Router();
 
 
-const {getUserProfile , updateUserProfile, syncUser, getCurrentUser, followUser} = require('../controllers/user.controller');
-const { protectRoute } = require('../middleware/auth.middleware');
+import {getUserProfile , updateUserProfile, syncUser, getCurrentUser, followUser} from'../controllers/user.controller.js';
+import { protectRoute } from '../middleware/auth.middleware.js';
 
 //PUBLIC ROUTES
 // GET /users/profile/:username - Get user profile by username
@@ -22,4 +22,4 @@ router.put('/profile',protectRoute, updateUserProfile);
 // POST /users/follow/:targetUserId - Follow or unfollow a user
 router.post('/follow/:targetUserId', protectRoute, followUser);
 
-module.exports = router;
+export default router;
